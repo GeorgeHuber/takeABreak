@@ -61,3 +61,8 @@ buck-out/
 # Expo
 .expo/*
 web-build/
+
+#expo
+.expo
+
+credentials.js
