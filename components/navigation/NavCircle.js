@@ -8,10 +8,10 @@ export default function NavCircle ({navigation}){
         navigation.openDrawer();
     }
     return(
-        <TouchableOpacity onPress={()=>press()} style={{height:height*0.15,width:height*0.15,borderStyle:"solid",borderWidth:0,position:"absolute",top:height*0.04,right:width*-0.02}}>
-        <View style={{width:20,
+        <TouchableOpacity onPress={()=>press()} style={{flexDirection:"column",alignItems:"center",height:height*0.15,width:height*0.15,borderStyle:"solid",borderWidth:0,position:"absolute",top:height*0.07,right:width*-0.02}}>
+        <View style={{flexDirection:"column",alignItems:"center",width:20,
         height:20}}>
-            <Image source={require("../../assets/nav/hamburger.png")} style={{width:width*.25,height:width*.25}}></Image>
+            <Image source={require("../../assets/nav/hamburger.png")} style={{width:width*.2,height:width*.2}}></Image>
         </View>
 
         </TouchableOpacity>

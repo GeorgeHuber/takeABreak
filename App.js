@@ -10,15 +10,16 @@ import Login from "./components/auth/Login"
 
 import HomeScreen from "./components/screens/Home.js"
 import OptionsScreen from "./components/screens/Options.js"
-
+import AccountScreen from "./components/screens/Account"
 const Drawer = createDrawerNavigator();
 
 const DrawerNav = () => {
   return (
-    <NavigationContainer independent={true}>
-      <Drawer.Navigator initialRouteName="Home">
+    <NavigationContainer independent={true} >
+      <Drawer.Navigator initialRouteName="Home" drawerContentOptions={{labelStyle:{fontSize:40}}}>
         <Drawer.Screen name="Home" component={HomeScreen} />
         <Drawer.Screen name="Options" component={OptionsScreen} />
+        <Drawer.Screen name="Account" component={AccountScreen}/>
       </Drawer.Navigator>
     </NavigationContainer>
   );

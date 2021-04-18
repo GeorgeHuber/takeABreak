@@ -4,23 +4,25 @@ import {WebView} from "react-native-webview"
 import {width, height} from "./misc/dimensions"
 
 export default function NavCircle ({link}){
-    const iframeString='<iframe src="'+link+'"  style="border:solid black 6px; overflow: hidden;"  scrolling="no" width= '+width*2.5+' height= '+width*2.5+''
+    const iframeString='<iframe src="'+link+'"  style="overflow: hidden;"  scrolling="no" width= '+width*3+' height= '+width*3+''
 
     return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <View style={{ alignItems: 'center', justifyContent: 'center',marginTop:height*.15 }}>
           
-        <View>
+        <View style={{width:width*.9,height:width*.9}}>
           <WebView
           bounces={false}
           scalesPageToFit={false}
           javaScriptEnabled
-          style={{width:width*.9,height:width*.9,borderWidth:9}}
+          style={{width:width*.95,height:height*.95}}
           automaticallyAdjustContentInsets={false}
           source={{
             html: `
                   <!DOCTYPE html>
                   <html>
-                    <head></head>
+                    <head>
+                    
+                    </head>
                     <body>
                       <div id="baseDiv">${iframeString}</div> 
                     </body>
@@ -29,7 +31,7 @@ export default function NavCircle ({link}){
           }}
           automaticallyAdjustContentInsets={false}
         />
-    </View>
+      </View>
       </View>
     );
   }
